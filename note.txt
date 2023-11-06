@@ -1,0 +1,4 @@
+File cấu trúc của project :
+Model: Là nơi chứa các file JS về class
+View: Là nơi chứa các file html,css,scss
+Controller: Là nơi lưu trữ các file JS xử lý logic, events, api, vv...
