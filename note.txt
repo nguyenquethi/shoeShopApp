@@ -2,3 +2,26 @@ File cấu trúc của project :
 Model: Là nơi chứa các file JS về class
 View: Là nơi chứa các file html,css,scss
 Controller: Là nơi lưu trữ các file JS xử lý logic, events, api, vv...
+
+Trong file View chia ra thành: html ( chứa các file html ) scss( chứa tệp css được sinh ra sau khi run file scss và các file scss)
+Trong file controller: Chứa thư mục validation ( gồm các file js phục vụ cho việc validation ), thư mục api ( gồm các file phục vụ việc call api),
+các file js xử lý hàm, logic
+
+
+
+Cấu trúc:
+model
+    model.js
+view
+    html
+        index.html
+    scss
+        css
+            style.css
+        style.scss
+controller
+    validation
+        validation.js
+    api
+        api.js
+    index.js
