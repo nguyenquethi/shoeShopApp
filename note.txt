@@ -1,0 +1,4 @@
+Cấu trúc file được chia làm 3 phần:
+Model: Là nơi chứa các file class
+View: Nơi chứa các file về html, css, scss
+Controller: Nơi chứa những file js xử lý những sự kiện button, hàm xử lý logic, api, vv...
