@@ -16,54 +16,6 @@
     color: $fontColor;
 }
 
-.top_header{
-    background: #e3a51e;
-    .top_header_content{
-        margin: auto 0;
-        font-size: 14px;
-        .welcome{
-            font-weight: 400;
-            color: #fff;
-            margin: auto 0;
-        }
-
-        ul{
-            margin: 0;
-            li{
-                position: relative;
-                cursor: pointer;
-                a{
-                    text-decoration: none;
-                    font-weight: 400;
-                    color: #fff;
-
-                    i{
-                        font-size: 9px;
-                        vertical-align: 2px;
-                    }
-                }
-
-                .currency_dropdown_list, .language_dropdown_list{
-                    display: none;
-                    width: 150px;
-                    position: absolute;
-                    background: #eeeeee;
-                    top: 100%;
-                    right: 0;
-                    opacity: 0;
-                    li{
-                        padding: 5px;
-                        a{
-                            color: #e3a51e;
-                            font-size: 400;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 header{
     background: transparent;
     margin: 0;
@@ -243,42 +195,102 @@ footer{
 }
 
 .feature{
-    .feature_content{
-        h3{
-            @include textCustom(25px, bold,#000 );
-            margin: 15px 0;
-        }
-
-        .feature_items{
-            margin: 0 auto;
-            .item{
-                padding: 15px;
-                margin: 10px;
-                .img_product{
+    .owl-carousel{
+        .feature_content{
+            .title{
+                h3{
+                    @include textCustom(28px, bold,#000 );
+                    margin: 10px 0;
+                }
+    
+                p{
+                    @include textCustom(16px, 500, #727777);
+                }
+            }
+    
+            .feature_items{
+                margin: 10px 0;
+    
+                .item{
+                    margin:20px 0;
+    
                     img{
                         display: block;
-                        max-width: 100%;
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+    
+                    .product_description{
+                        h3{
+                            @include textCustom(16px, 600, #000);
+                            text-transform: uppercase;
+                        }
+    
+                        .price{
+                            .discount_price{
+                                margin: 0;
+                                @include textCustom(16px, 500, #000 )
+                            }
+    
+                            .original_price{
+                                margin: 0;
+                                @include textCustom(16px, 500, #727777);
+                                text-decoration:line-through
+                            }
+                        }
+    
+                        .btn_group{
+                            margin-top: 20px;
+                            a{
+                                text-decoration: none;
+                                margin-right: 10px;
+                                transition: all 0.5s;
+                                i{
+                                    width: 30px;
+                                    height: 30px;
+                                    background: #828cb1;
+                                    color: #fff;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    border-radius: 50px;
+                                }
+                                span{
+                                    display: none;
+                                    @include textCustom(13px, 600, #000);
+                                    text-transform: uppercase;
+                                    margin-left: 10px;
+                                }
+    
+                                &:hover{
+                                    i{
+                                        background: linear-gradient(to-right,#ffc107 50%, #fd7e14 50%);
+                                    }
+                                    span{
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
+            }
+        }
 
-                .item_detail{
-                    h4{
-                        @include textCustom(20px, 500, #000 );
-                        margin: 15px 0;
-                    }
+        .owl-nav{
+            position: absolute;
+            top:20px;
+            width: 450px;
+            transform: translate(90%,0);
 
-                    span{
-                        @include textCustom(15px, 500, #000 )
-                    }
+            display: flex;
+            justify-content: space-between;
 
-                    p{
-                        @include textCustom(18px, 500,#000 );
-                        margin-bottom:10px;
-                    }
-
-
+            &:hover{
+                button{
+                    background: transparent;
                 }
             }
         }
     }
+    
 }
