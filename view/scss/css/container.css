@@ -306,4 +306,34 @@ footer .footer_end_content p {
 .deal .deal_content .deals_list .black_friday_content a img {
   display: block;
   width: 100%;
+}
+
+.benefit .benefit_content {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+}
+.benefit .benefit_content ul {
+  margin: 0;
+}
+.benefit .benefit_content ul li {
+  padding: 15px;
+}
+.benefit .benefit_content ul li a {
+  display: block;
+  margin: 15px 0;
+}
+.benefit .benefit_content ul li a i {
+  color: #222222;
+  font-size: 25px;
+}
+.benefit .benefit_content ul li .description h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+.benefit .benefit_content ul li .description span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #727777;
 }/*# sourceMappingURL=container.css.map */

@@ -364,3 +364,36 @@ footer{
         }
     }
 }
+
+.benefit{
+    .benefit_content{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 10px;
+        ul{
+            margin: 0;
+            li{
+                padding: 15px;
+                a{
+                    display: block;
+                    margin: 15px 0;
+                    i{
+                        color: #222222;
+                        font-size: 25px;
+                    }
+                }
+
+                .description{
+
+                    h3{
+                        @include textCustom(16px, 600, #000);
+                        margin: 0;
+                    }
+
+                    span{
+                        @include textCustom(15px, 500, #727777)
+                    }
+                }
+            }
+        }
+    }
+}
