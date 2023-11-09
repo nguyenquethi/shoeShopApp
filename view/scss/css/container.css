@@ -360,4 +360,140 @@ footer .footer_end_content p {
 }
 .sponsors .sponsor_content ul li:hover a img {
   filter: opacity(1);
+}
+
+.hot_deal .hot_deal_content .left {
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("./.././../image/hot_deal_left_bg.png") center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 250px 0;
+}
+.hot_deal .hot_deal_content .left .left_content {
+  margin: 0 20px;
+}
+.hot_deal .hot_deal_content .left .left_content h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+.hot_deal .hot_deal_content .left .left_content p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+.hot_deal .hot_deal_content .left .left_content .countdown {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 0;
+  margin: 0 30px;
+}
+.hot_deal .hot_deal_content .left .left_content .countdown .time_element {
+  margin: 0;
+}
+.hot_deal .hot_deal_content .left .left_content .countdown .time_element h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+.hot_deal .hot_deal_content .left .left_content .countdown .time_element span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.hot_deal .hot_deal_content .left .left_content button {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 50px;
+  background-image: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 50px;
+  padding: 0 25px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s;
+}
+.hot_deal .hot_deal_content .left .left_content button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -155px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: skew(40deg);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.hot_deal .hot_deal_content .left .left_content button:hover {
+  overflow: hidden;
+  outline: none;
+}
+.hot_deal .hot_deal_content .left .left_content button:hover::before {
+  left: 180px;
+  opacity: 0.3;
+}
+.hot_deal .hot_deal_content .right .right_content .items {
+  padding: 0 200px;
+}
+.hot_deal .hot_deal_content .right .right_content .items img {
+  display: block;
+  width: 100%;
+}
+.hot_deal .hot_deal_content .right .right_content .items .price .discount {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.hot_deal .hot_deal_content .right .right_content .items .price .original {
+  font-size: 16px;
+  font-weight: 500;
+  color: #727777;
+  text-decoration: line-through;
+}
+.hot_deal .hot_deal_content .right .right_content .items h3 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+.hot_deal .hot_deal_content .right .right_content .items a {
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
+}
+.hot_deal .hot_deal_content .right .right_content .items a i {
+  font-size: 15px;
+  background: #fd7e14;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+}
+.hot_deal .hot_deal_content .right .right_content .items a span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.hot_deal .hot_deal_content .right .right_content .owl-nav {
+  position: absolute;
+  top: 45%;
+  left: -80%;
+  width: 95%;
+  transform: translate(90%, 0);
+  display: flex;
+  justify-content: space-between;
+}
+.hot_deal .hot_deal_content .right .right_content .owl-nav:hover button {
+  background: transparent;
 }/*# sourceMappingURL=container.css.map */

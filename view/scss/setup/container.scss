@@ -437,3 +437,152 @@ footer{
         }
     }
 }
+
+.hot_deal{
+    .hot_deal_content{
+        .left{
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.35), 
+                rgba(0, 0, 0, 0.35)
+              ), url('./.././../image/hot_deal_left_bg.png') center no-repeat;
+            background-size: cover;
+            position: relative;
+            text-align: center;
+            padding: 250px 0;
+
+            .left_content{
+                margin: 0 20px;
+                h2{
+                    @include textCustom(40px, 600, #fff);
+                    text-transform: capitalize;
+                }
+
+                p{
+                    @include textCustom(15px, 500, #fff )
+                }
+
+                .countdown{
+                    background: #fff;
+                    border-radius: 10px;
+                    padding: 18px 0;
+                    margin: 0 30px;
+                    .time_element{
+                        margin: 0;
+                        h2{
+                            @include textCustom(36px, 600, #000);
+                            margin:0;
+                        }
+
+                        span{
+                            @include textCustom(16px, 500, #000)
+                        }
+                    }
+                }
+
+                button{
+                    margin-top: 20px;
+                    background: #fff;
+                    border-radius: 50px;
+                    background-image: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+
+                    @include textCustom(16px, 500, #FFF);
+                    line-height: 50px;
+                    padding: 0 25px;
+                    text-transform: uppercase;
+                    position: relative;
+
+                    transition: all 0.3s;
+
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left: -155px;
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        transform: skew(40deg);
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover{
+                        overflow: hidden;
+                        outline: none;
+                        &::before{
+                            left: 180px;
+                            opacity: .3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right{
+            .right_content{
+                
+                .items{
+                    padding: 0 200px;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                    .price{
+                        .discount{
+                            @include textCustom(16px, 500, #000)
+                        }
+                        .original{
+                            @include textCustom(16px, 500, #727777 );
+                            text-decoration: line-through;
+                        }
+                    }
+
+                    h3{
+                        @include textCustom(25px, 500, #000);
+                        text-transform: uppercase;
+                        margin: 20px 0 0 0;
+                    }
+
+                    a{
+                        display: block;
+                        margin-top: 30px;
+                        text-decoration: none;
+                        i{
+                            font-size: 15px;
+                            background: #fd7e14;
+                            color: #fff;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            border-radius: 50px
+                        }
+                        span{
+                            @include textCustom(16px, 500, #000);
+                            text-transform: uppercase;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                .owl-nav{
+                    position: absolute;
+                    top: 45%;
+                    left: -80%;
+                    width: 95%;
+                    transform: translate(90%,0);
+        
+                    display: flex;
+                    justify-content: space-between;
+        
+                    &:hover{
+                        button{
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
