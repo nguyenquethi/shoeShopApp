@@ -376,9 +376,19 @@ footer{
                 a{
                     display: block;
                     margin: 15px 0;
+                    transition: all 0.5s;
                     i{
                         color: #222222;
                         font-size: 25px;
+                        transition: all 0.5s;
+                    }
+                }
+
+                &:hover{
+                    a{
+                        i{
+                            color: #727777;
+                        }
                     }
                 }
 
@@ -391,6 +401,36 @@ footer{
 
                     span{
                         @include textCustom(15px, 500, #727777)
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sponsors{
+    .sponsor_content{
+        ul{
+            margin: 20px 0;
+            li{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: all 0.5s;
+                    img{
+                        display: block;
+                        width: 120px;
+                        filter: opacity(0.5);
+                        transition: all 0.5s;
+                    }
+                }
+
+                &:hover{
+                    a{
+                        img{
+                            filter: opacity(1);
+                        }
                     }
                 }
             }

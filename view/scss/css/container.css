@@ -321,10 +321,15 @@ footer .footer_end_content p {
 .benefit .benefit_content ul li a {
   display: block;
   margin: 15px 0;
+  transition: all 0.5s;
 }
 .benefit .benefit_content ul li a i {
   color: #222222;
   font-size: 25px;
+  transition: all 0.5s;
+}
+.benefit .benefit_content ul li:hover a i {
+  color: #727777;
 }
 .benefit .benefit_content ul li .description h3 {
   font-size: 16px;
@@ -336,4 +341,23 @@ footer .footer_end_content p {
   font-size: 15px;
   font-weight: 500;
   color: #727777;
+}
+
+.sponsors .sponsor_content ul {
+  margin: 20px 0;
+}
+.sponsors .sponsor_content ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s;
+}
+.sponsors .sponsor_content ul li a img {
+  display: block;
+  width: 120px;
+  filter: opacity(0.5);
+  transition: all 0.5s;
+}
+.sponsors .sponsor_content ul li:hover a img {
+  filter: opacity(1);
 }/*# sourceMappingURL=container.css.map */
