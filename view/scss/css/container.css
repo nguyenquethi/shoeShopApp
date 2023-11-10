@@ -496,4 +496,62 @@ footer .footer_end_content p {
 }
 .hot_deal .hot_deal_content .right .right_content .owl-nav:hover button {
   background: transparent;
+}
+
+.product_category .left {
+  padding: 0;
+  margin: 0 10px;
+}
+.product_category .left .item {
+  padding: 0;
+  margin: 0 15px 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+.product_category .left .item img {
+  height: 100%;
+  vertical-align: middle;
+  border-style: none;
+  object-fit: cover;
+  z-index: 1;
+}
+.product_category .left .item .overlay {
+  position: absolute;
+  background: #000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.product_category .left .item .overlay span {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 115%;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+.product_category .left .item:hover .overlay {
+  opacity: 0.5;
+  visibility: visible;
+}
+.product_category .left .item:hover .overlay span {
+  top: 45%;
+  opacity: 2;
+  visibility: visible;
+}
+.product_category .right {
+  padding: 0;
+}
+.product_category .right a img {
+  height: 96%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
 }/*# sourceMappingURL=container.css.map */
