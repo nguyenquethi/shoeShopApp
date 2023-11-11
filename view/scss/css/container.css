@@ -10,35 +10,37 @@
   max-width: 1280px;
 }
 
-header {
+.header_area {
+  margin: 40px 0;
+}
+.header_area header {
   background: transparent;
   margin: 0;
 }
-header .header_content {
+.header_area header .header_content {
   position: relative;
   width: 100%;
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin: 40px 0;
 }
-header .header_content .logo {
+.header_area header .header_content .logo {
   padding: 10px;
 }
-header .header_content .logo p {
+.header_area header .header_content .logo p {
   margin: 0;
   font-size: 30px;
   font-weight: bold;
 }
-header .header_content nav {
+.header_area header .header_content nav {
   padding: 0;
 }
-header .header_content nav ul {
+.header_area header .header_content nav ul {
   margin: auto;
 }
-header .header_content nav ul li {
+.header_area header .header_content nav ul li {
   margin: 0 15px;
 }
-header .header_content nav ul li a {
+.header_area header .header_content nav ul li a {
   display: block;
   text-decoration: none;
   font-size: 12px;
@@ -46,21 +48,21 @@ header .header_content nav ul li a {
   color: #000;
   transition: all 0.5s;
 }
-header .header_content nav ul li a span {
+.header_area header .header_content nav ul li a span {
   padding: 3px;
 }
-header .header_content nav ul li .sub_menu {
+.header_area header .header_content nav ul li .sub_menu {
   position: absolute;
   display: none;
   padding-top: 26px;
   background: #fff;
   transition: all 0.5s;
 }
-header .header_content nav ul li .sub_menu ul li {
+.header_area header .header_content nav ul li .sub_menu ul li {
   margin: 0;
   transition: all 0.3s;
 }
-header .header_content nav ul li .sub_menu ul li a {
+.header_area header .header_content nav ul li .sub_menu ul li a {
   display: block;
   text-decoration: none;
   font-size: 12px;
@@ -70,31 +72,61 @@ header .header_content nav ul li .sub_menu ul li a {
   padding: 0 30px;
   line-height: 45px;
 }
-header .header_content nav ul li .sub_menu ul li a:hover {
+.header_area header .header_content nav ul li .sub_menu ul li a:hover {
   color: #fff;
 }
-header .header_content nav ul li .sub_menu ul li:hover {
+.header_area header .header_content nav ul li .sub_menu ul li:hover {
   background: #e3a51e;
 }
-header .header_content nav ul li .active {
+.header_area header .header_content nav ul li .active {
   color: #e3a51e;
 }
-header .header_content nav ul li:hover .sub_menu {
+.header_area header .header_content nav ul li:hover .sub_menu {
   display: block;
 }
-header .header_content nav ul li:hover a {
+.header_area header .header_content nav ul li:hover a {
   color: #e3a51e;
 }
-header .header_content nav .col-lg-2 a {
+.header_area header .header_content nav .col-lg-2 a {
   text-decoration: none;
   color: #000;
 }
-header .header_content nav .col-lg-2 a i {
+.header_area header .header_content nav .col-lg-2 a i {
   display: inline-block;
   font-size: 12px;
   padding: 0 5px;
   vertical-align: 2px;
   transition: all 0.5s;
+}
+.header_area .search_area {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+.header_area .search_area form {
+  background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+}
+.header_area .search_area form input {
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+}
+.header_area .search_area form input::-webkit-input-placeholder {
+  color: #fff;
+}
+.header_area .search_area form input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.header_area .search_area form .search_btn i, .header_area .search_area form .close_btn i {
+  font-size: 13px;
+  color: #fff;
+}
+.header_area .search_area form .search_btn:focus, .header_area .search_area form .close_btn:focus {
+  outline: none;
+  border: none;
 }
 
 footer {
@@ -554,4 +586,46 @@ footer .footer_end_content p {
   object-fit: cover;
   vertical-align: middle;
   border-style: none;
+}
+
+.banner {
+  display: block;
+  background: url("./../../image/background.png") center no-repeat;
+  background-size: cover;
+  padding: 150px 0;
+}
+.banner .banner_content .left h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.banner .banner_content .left p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #727777;
+  margin: 0;
+}
+.banner .banner_content .left .btn_area {
+  margin-top: 30px;
+}
+.banner .banner_content .left .btn_area button i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 50px;
+}
+.banner .banner_content .left .btn_area span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+.banner .banner_content .right img {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=container.css.map */

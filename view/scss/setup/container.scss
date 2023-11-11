@@ -16,104 +16,141 @@
     color: $fontColor;
 }
 
-header{
-    background: transparent;
-    margin: 0;
+.header_area{
+    margin: 40px 0;
+    header{
+        background: transparent;
+        margin: 0;
+    
+        .header_content{
+            position: relative;
+            width: 100%;
+            background: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    .header_content{
-        position: relative;
-        width: 100%;
-        background: #fff;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin: 40px 0;
-
-        .logo{
-            padding: 10px;
-
-            p{
-                margin: 0;
-                font-size: 30px;
-                font-weight: bold;
+            .logo{
+                padding: 10px;
+    
+                p{
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
             }
-        }
-
-        nav{
-            padding: 0;
-            ul{
-                margin: auto;
-                li{
-                    margin: 0 15px;
-                    a{
-                        display: block;
-                        text-decoration: none;
-                        @include textCustom(12px, 600 , #000 );
-                        transition: all 0.5s;
-
-                        span{
-                            padding: 3px;
+    
+            nav{
+                padding: 0;
+                ul{
+                    margin: auto;
+                    li{
+                        margin: 0 15px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            @include textCustom(12px, 600 , #000 );
+                            transition: all 0.5s;
+    
+                            span{
+                                padding: 3px;
+                            }
                         }
-                    }
-
-                    .sub_menu{
-                        position: absolute;
-                        display: none;
-                        padding-top: 26px;
-                        background: #fff;
-                        transition: all 0.5s;
-                        ul{
-                            li{
-                                margin: 0;
-                                transition: all 0.3s;
-                                a{
-                                    display: block;
-                                    text-decoration: none;
-                                    @include textCustom(12px, 600 , #e3a51e );
+    
+                        .sub_menu{
+                            position: absolute;
+                            display: none;
+                            padding-top: 26px;
+                            background: #fff;
+                            transition: all 0.5s;
+                            ul{
+                                li{
+                                    margin: 0;
                                     transition: all 0.3s;
-                                    padding: 0 30px;
-                                    line-height: 45px;
-
-                                    &:hover{
-                                        color: #fff;
+                                    a{
+                                        display: block;
+                                        text-decoration: none;
+                                        @include textCustom(12px, 600 , #e3a51e );
+                                        transition: all 0.3s;
+                                        padding: 0 30px;
+                                        line-height: 45px;
+    
+                                        &:hover{
+                                            color: #fff;
+                                        }
                                     }
-                                }
-
-                                &:hover{
-                                    background: #e3a51e;
+    
+                                    &:hover{
+                                        background: #e3a51e;
+                                    }
                                 }
                             }
                         }
-                    }
-
-                    .active{
-                        color: #e3a51e;
-                    }
-
-                    &:hover{
-                        .sub_menu{
-                            display: block;
-                        }
-
-                        a{
+    
+                        .active{
                             color: #e3a51e;
-                        }   
-                    }
-                } 
-            }
-
-            .col-lg-2{
-                a{
-                    text-decoration: none;
-                    color: #000;
-                    i{
-                        display: inline-block;
-                        font-size: 12px;
-                        padding: 0 5px;
-                        vertical-align: 2px;
-                        transition: all 0.5s;
+                        }
+    
+                        &:hover{
+                            .sub_menu{
+                                display: block;
+                            }
+    
+                            a{
+                                color: #e3a51e;
+                            }   
+                        }
+                    } 
+                }
+    
+                .col-lg-2{
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                        i{
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 0 5px;
+                            vertical-align: 2px;
+                            transition: all 0.5s;
+                        }
                     }
                 }
             }
         }
+    }
+
+    .search_area{
+        position: fixed;
+        left: 0;
+        width: 100%;
+
+        form{
+            background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+            input{
+                background: transparent;
+                @include textCustom(13px, 500,#fff);
+                border:none;
+                &::-webkit-input-placeholder{
+                    color: #fff;
+                };
+
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .search_btn, .close_btn{
+                i{
+                    font-size: 13px;
+                    color: #fff;
+                }
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+        
     }
 }
 
@@ -649,6 +686,55 @@ footer{
                 object-fit: cover;
                 vertical-align: middle;
                 border-style: none;
+            }
+        }
+    }
+}
+
+.banner{
+    display: block;
+    background: url('./../../image/background.png') center no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+    .banner_content{
+        .left{
+            h1{
+                @include textCustom(60px, 600, #000);
+                margin-bottom: 30px;
+                text-transform: capitalize;
+            }
+
+            p{
+                @include textCustom(16px, 500, #727777);
+                margin: 0;
+            }
+
+            .btn_area{
+                margin-top: 30px;
+                button{
+                    
+                    i{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+                        color: #fff;
+                        font-size: 15px;
+                        border-radius: 50px;
+                    }
+                }
+
+                span{
+                    @include textCustom(13px, 600, #000);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .right{
+            img{
+                display: block;
+                width: 100%;
             }
         }
     }
