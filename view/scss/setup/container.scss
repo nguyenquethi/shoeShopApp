@@ -7,7 +7,7 @@
 
 .container{
     margin: auto;
-    max-width: 1280px;
+    max-width: 1200px !important;
 }
 
 @mixin textCustom($fontSize, $fontWeight, $fontColor){
@@ -17,8 +17,13 @@
 }
 
 .header_area{
-    margin: 40px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin: 30px 0;
     header{
+        top: 0;
         background: transparent;
         margin: 0;
     
@@ -166,12 +171,12 @@ footer{
             }
 
             .description{
-                @include textCustom(15px, 500 , #727777 )
+                @include textCustom(13px, 500 , #727777 )
             }
 
             .contact{
                 p{
-                    @include textCustom(15px, 500, #727777);
+                    @include textCustom(13px, 500, #727777);
                     margin-bottom: 10px;
                 }
 
@@ -197,7 +202,7 @@ footer{
 
             .social_list{
                 p{
-                    @include textCustom(15px, 500 , #727777 )
+                    @include textCustom(13px, 500 , #727777 )
                 }
 
                 ul{
@@ -232,6 +237,7 @@ footer{
 }
 
 .feature{
+    margin: 80px 0;
     .owl-carousel{
         .feature_content{
             .title{
@@ -278,6 +284,7 @@ footer{
     
                         .btn_group{
                             margin-top: 20px;
+                            transition: all 0.5s;
                             a{
                                 text-decoration: none;
                                 margin-right: 10px;
@@ -290,12 +297,14 @@ footer{
                                     text-align: center;
                                     line-height: 30px;
                                     border-radius: 50px;
+                                    transition: all 0.5s;
                                 }
                                 span{
                                     display: none;
                                     @include textCustom(13px, 600, #000);
                                     text-transform: uppercase;
                                     margin-left: 10px;
+                                    transition: all 0.5s;
                                 }
     
                                 &:hover{
@@ -316,7 +325,7 @@ footer{
         .owl-nav{
             position: absolute;
             top:20px;
-            width: 450px;
+            width: 400px;
             transform: translate(90%,0);
 
             display: flex;
@@ -333,9 +342,10 @@ footer{
 }
 
 .deal{
+    margin: 30px 0 80px 0;
     .deal_content{
         h3{
-            @include textCustom(30px,600 ,#000)
+            @include textCustom(36px,600 ,#000)
         }
 
         p{
@@ -403,6 +413,7 @@ footer{
 }
 
 .benefit{
+    padding: 80px 0;
     .benefit_content{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding: 10px;
@@ -447,6 +458,7 @@ footer{
 
 .sponsors{
     .sponsor_content{
+        margin: 80px 0;
         ul{
             margin: 20px 0;
             li{
@@ -560,7 +572,7 @@ footer{
             .right_content{
                 
                 .items{
-                    padding: 0 200px;
+                    padding: 0 150px;
                     img{
                         display: block;
                         width: 100%;
@@ -626,13 +638,13 @@ footer{
 
 .product_category{
     .left{
+        display: block;
         padding: 0;
-        margin: 0 10px;
         .item{
             padding: 0;
-            margin: 0 15px 15px 0;
             position: relative;
-            overflow: hidden;
+            overflow: unset;
+            outline: none;
             img{
                 height: 100%;
                 vertical-align: middle;
@@ -643,6 +655,7 @@ footer{
 
             .overlay{
                 position: absolute;
+                margin: 0 15px 15px 0;
                 background: #000;
                 top: 0;
                 width: 100%;
@@ -669,6 +682,7 @@ footer{
                     visibility: visible;
 
                     span{
+                        height: 100%;
                         top: 45%;
                         opacity: 2;
                         visibility: visible;
@@ -680,12 +694,48 @@ footer{
 
     .right{
         padding: 0;
-        a{
+        .item{
+            position: relative;
             img{
-                height: 96%;
-                object-fit: cover;
-                vertical-align: middle;
-                border-style: none;
+                height: 100%;
+                display: block;
+                object-fit: fill;
+            }
+
+            .overlay{
+                position: absolute;
+                background: #000;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                span{
+                    display: inline-block;
+                    @include textCustom(15px, 500 ,#fff );
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    text-align: center;
+                    transition: all 0.3s;
+                }
+                
+            }
+
+            &:hover{
+                .overlay{
+                    opacity: .5;
+                    visibility: visible;
+
+                    span{
+                        height: 100%;
+                        top: 45%;
+                        opacity: 2;
+                        visibility: visible;
+                    }
+                }
             }
         }
     }
@@ -693,19 +743,22 @@ footer{
 
 .banner{
     display: block;
-    background: url('./../../image/background.png') center no-repeat;
-    background-size: cover;
-    padding: 150px 0;
+    background: url('./../../image/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    padding: 100px 0;
     .banner_content{
         .left{
+            padding: 0;
             h1{
-                @include textCustom(60px, 600, #000);
+                @include textCustom(60px, bold, #000);
                 margin-bottom: 30px;
                 text-transform: capitalize;
             }
 
             p{
-                @include textCustom(16px, 500, #727777);
+                @include textCustom(15px, 500, #727777);
                 margin: 0;
             }
 
@@ -733,8 +786,8 @@ footer{
 
         .right{
             img{
-                display: block;
-                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
