@@ -325,7 +325,7 @@ footer{
         .owl-nav{
             position: absolute;
             top:20px;
-            width: 400px;
+            width: 420px;
             transform: translate(90%,0);
 
             display: flex;
@@ -335,6 +335,12 @@ footer{
                 button{
                     background: transparent;
                 }
+            }
+        }
+
+        @media  screen and (max-width: 950px) {
+            .owl-nav{
+                display: none;
             }
         }
     }

@@ -282,13 +282,18 @@ footer .footer_end_content p {
 .feature .owl-carousel .owl-nav {
   position: absolute;
   top: 20px;
-  width: 400px;
+  width: 420px;
   transform: translate(90%, 0);
   display: flex;
   justify-content: space-between;
 }
 .feature .owl-carousel .owl-nav:hover button {
   background: transparent;
+}
+@media screen and (max-width: 950px) {
+  .feature .owl-carousel .owl-nav {
+    display: none;
+  }
 }
 
 .deal {

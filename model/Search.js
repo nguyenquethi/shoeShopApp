@@ -11,3 +11,5 @@ class Search{
         this.arrProduct = arrProduct
     }
 }
+
+export default Search
