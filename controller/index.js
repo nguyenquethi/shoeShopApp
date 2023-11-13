@@ -138,5 +138,5 @@ function renderDisplay2(product) {
     </div>
     </div>`;
 
-  document.querySelector(".container").innerHTML = head + tempMid + tail;
+  document.getElementById('bodyDetail').innerHTML = head + tempMid + tail;
 }
