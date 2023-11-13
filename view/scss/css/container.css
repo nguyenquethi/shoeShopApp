@@ -92,11 +92,11 @@
 .header_area header .header_content nav ul li:hover a {
   color: #e3a51e;
 }
-.header_area header .header_content nav .col-lg-2 a {
+.header_area header .header_content nav .side a {
   text-decoration: none;
   color: #000;
 }
-.header_area header .header_content nav .col-lg-2 a i {
+.header_area header .header_content nav .side a i {
   display: inline-block;
   font-size: 12px;
   padding: 0 5px;
