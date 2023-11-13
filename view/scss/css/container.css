@@ -659,7 +659,7 @@ footer .footer_end_content p {
   background: url("./../../image/background.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: cover;
   padding: 100px 0;
 }
 .banner .banner_content .left {
