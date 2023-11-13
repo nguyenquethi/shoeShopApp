@@ -560,7 +560,8 @@ footer .footer_end_content p {
   padding: 0;
 }
 .product_category .left .item {
-  padding: 10px;
+  margin: 10px;
+  padding: 0;
   position: relative;
   overflow: unset;
   outline: none;
@@ -611,12 +612,14 @@ footer .footer_end_content p {
 }
 .product_category .right .item {
   position: relative;
-  padding: 10px 0 10px 0;
+  margin: 10px;
+  padding: 0;
 }
 .product_category .right .item img {
   height: 100%;
-  display: block;
+  vertical-align: middle;
   object-fit: cover;
+  border-style: none;
 }
 .product_category .right .item .overlay {
   position: absolute;
