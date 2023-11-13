@@ -647,7 +647,7 @@ footer{
         display: block;
         padding: 0;
         .item{
-            padding: 0;
+            padding: 10px;
             position: relative;
             overflow: unset;
             outline: none;
@@ -661,12 +661,13 @@ footer{
 
             .overlay{
                 position: absolute;
-                margin: 0 15px 15px 0;
+                display: block;
                 background: #000;
                 top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
-                opacity: 0;
+                filter: opacity(0);
                 visibility: hidden;
                 transition: all 0.3s;
                 span{
@@ -684,13 +685,13 @@ footer{
 
             &:hover{
                 .overlay{
-                    opacity: .5;
+                    filter: opacity(.5);
                     visibility: visible;
 
                     span{
                         height: 100%;
                         top: 45%;
-                        opacity: 2;
+                        filter: opacity(1);
                         visibility: visible;
                     }
                 }
@@ -702,10 +703,11 @@ footer{
         padding: 0;
         .item{
             position: relative;
+            padding: 10px 0 10px 0;
             img{
                 height: 100%;
                 display: block;
-                object-fit: fill;
+                object-fit: cover;
             }
 
             .overlay{
