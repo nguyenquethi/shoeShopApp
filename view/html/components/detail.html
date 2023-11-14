@@ -27,74 +27,102 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!--Jquery CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
   <!-- my css -->
-  <link rel="stylesheet" href="./../../scss/css/carosel.css">
-  <link rel="stylesheet" href="./../../../view/scss/css/container.css">
+  <link rel="stylesheet" href="./../../scss/css/container.css">
 </head>
 
 <body>
-  <header>
-    <div class="container">
-        <div class="header_content w-100 d-flex justify-content-between align-items-center px-2">
-            <div class="logo mx-4">
-                <img src="./../../image/m1coteeh.png" alt="#">
-            </div>
+  <section class="header_area">
+    <header>
+        <div class="container">
+            <div class="header_content w-100 d-block">
 
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-between py-1">
+                    <a class="navbar-brand logo mx-4" href="#">
+                        <img src="./../../image/m1coteeh.png" alt="#">
+                    </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarSupportedContent">
+                            <ul class="list-unstyled nav navbar-nav ms-auto me-0">
+                            <li class="nav-item">
+                                <a href="#" class="active"><span>HOME</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <span>SHOP</span>
+                                </a>
+                                <div class="sub_menu col-lg-2">
+                                    <ul class="list-unstyled">
+                                        <li class="border-bottom"><a href="#">SHOP CATEGORY</a></li>
+                                        <li class="border-bottom"><a href="#">PRODUCT DETAILS</a></li>
+                                        <li class="border-bottom"><a href="#">PRODUCT CHECKOUT</a></li>
+                                        <li class="border-bottom"><a href="#">SHOPPING CART</a></li>                   
+                                        <li><a href="#">CONFIRMATION</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <span>BLOGS</span>
+                                </a>
+                                <div class="sub_menu col-lg-2">
+                                    <ul class="list-unstyled">
+                                        <li class="border-bottom"><a href="#">BLOG</a></li>
+                                        <li><a href="#">BLOG DETAILS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#">
+                                    <span>PAGE</span>
+                                </a>
+                                <div class="sub_menu col-lg-2">
+                                    <ul class="list-unstyled">
+                                        <li class="border-bottom"><a href="#">LOGIN</a></li>
+                                        <li class="border-bottom"><a href="#">TRACKING</a></li>
+                                        <li><a href="#">ELEMENT</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#"><span>CONTACT</span></a>
+                            </li>
+                            </ul>
+                            <ul class="col-lg-2 d-flex side list-unstyled mx-0">
+                                <li class="nav-item mx-2">
+                                    <a href="#" class="mx-1"><i class="fa fa-shopping-cart"></i></a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a href="#" class="mx-1" id="search"><i class="fa fa-search"></i></a>
+                                </li>
+                                
+                            </ul>
+                      </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="search_area">
+        <div class="container">
+            <form id="search_form" action="#" class="d-flex justify-content-between align-items-center px-4">
+                <input type="text" class="form-control" placeholder="Search products...">
+                <button type="submit" class="btn mx-2 search_btn"><i class="fa fa-search"></i></button>
+                <button class="btn mx-2 close_btn"><i class="fa fa-close"></i></button>
+            </form>
             
-            <nav class="navbar navbar-expand-lg justify-content-between mx-4">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <ul class="d-flex align-items-center list-unstyled" id="navbar">
-                    <li><a href="#" class="active"><span>HOME</span></a></li>
-                    <li>
-                        <a href="#">
-                            <span>SHOP</span>
-                        </a>
-                        <div class="sub_menu col-lg-5">
-                            <ul class="list-unstyled">
-                                <li class="border-bottom"><a href="#">SHOP CATEGORY</a></li>
-                                <li class="border-bottom"><a href="#">PRODUCT DETAILS</a></li>
-                                <li class="border-bottom"><a href="#">PRODUCT CHECKOUT</a></li>
-                                <li class="border-bottom"><a href="#">SHOPPING CART</a></li>                   
-                                <li><a href="#">CONFIRMATION</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>BLOGS</span>
-                        </a>
-                        <div class="sub_menu col-lg-5">
-                            <ul class="list-unstyled">
-                                <li class="border-bottom"><a href="#">BLOG</a></li>
-                                <li><a href="#">BLOG DETAILS</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>PAGE</span>
-                        </a>
-                        <div class="sub_menu col-lg-5">
-                            <ul class="list-unstyled">
-                                <li class="border-bottom"><a href="#">LOGIN</a></li>
-                                <li class="border-bottom"><a href="#">TRACKING</a></li>
-                                <li><a href="#">ELEMENT</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><span>CONTACT</span></a></li>
-                </ul>
-                <div class="col-lg-2 d-flex side">
-                    <a href="#" class="mx-1"><i class="fa fa-shopping-cart"></i></a>
-                    <a href="#" class="mx-1"><i class="fa fa-search"></i></a>
-                </div>
-            </nav>
         </div>
     </div>
-</header>
+</section>
   <!-- star session -->
   <section class="bg-light">
     <div class="container pb-5" id="bodyDetail">
@@ -103,66 +131,16 @@
  </section>
   <!-- end session -->
 
-  <section class="service">
-    <div class="container">
-      <!-- title  -->
-      <div class="service_title">
-        <h2>RELATED PRODUCTS</h2>
+  <section>
+    <div class="container mb-5">
+      <div class="row text-center">
+        <h3>RELATED PRODUCT</h3>
       </div>
 
-      <!-- content  -->
-      <div class="service_content">
-        <div class="my-carousel">
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-        </div>
+      <div class="row d-flex justify-content-between card-body" id="productBody">
+        <!-- card item -->
+        
+
       </div>
     </div>
   </section>
@@ -232,31 +210,17 @@
   <!-- axios -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js" integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- slick carousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
-    integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- toggle -->
   <script>
-    $(document).ready(function () {
-      $('.my-carousel').slick({
-        // giúp hiển thị số slide lên cho người dùng xem 
-        slidesToShow: 5,
-        // infinity giúp khi chạy hết các slide sẽ quay về chạy tiếp slides đầu tiên 
-        infinite: true,
-        slidesToScroll: 3,
-        // speed giúp điều chỉnh tốc độ qua slide 
-        // speed: 5000,
-        dots: true,
-        // loại bỏ mũi tên
-        arrows: false
-      });
-    });
+    $('.search_area').hide()
+    $('#search').on("click", function(){
+        $('.search_area').slideToggle()
+        $('#search_form').focus()
+    })
+
+    $('.close_btn').on('click',function(){
+        $('.search_area').slideUp(500)
+    })
   </script>
 
   <!-- my script -->

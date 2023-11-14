@@ -52,7 +52,7 @@ function getDataUser() {
       renderDisplay2(result.data.content);
     })
     .catch(function (error) {
-      // console.log(error);
+      console.log(error);
     });
 }
 
@@ -139,70 +139,54 @@ function renderDisplay2(product) {
     </div>
     </div>`;
 
-  document.getElementById('bodyDetail').innerHTML = head + tempMid + tail;
+    document.getElementById('bodyDetail').innerHTML = head + tempMid + tail;
 
-  var relatedPro = `
-  <!-- title  -->
-      <div class="service_title">
-        <h2>RELATED PRODUCTS</h2>
-      </div>
-
-      <!-- content  -->
-      <div class="service_content">
-        <div class="my-carousel">
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
-          <!-- item carousel  -->
-          <div class="item_carousel">
-            <div class="carousel_bg">
-              <i class="fa-solid fa-memory"></i>
-              <p>website <br> development</p>
-            </div>
-          </div>
+    for (var i = 0; i < product.relatedProducts.length; i++){
+      var relatePro = "";
+      relatePro += `<div class="col-4 card" style="width: 20rem;">
+      <img class="card-img-top" src="${product.relatedProducts[i].image}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">${product.relatedProducts[i].name}</h5>
+        <p class="card-text">${product.relatedProducts[i].description}</p>
+        <div class="row d-flex g-2">
+        <a href="#" class="btn btn-warning">${product.relatedProducts[i].price}</a>
+        <a href="#" class="btn btn-light">Buy Now</a>
         </div>
       </div>
-  `
+    </div>
+    
+    <!-- card item -->
+    <div class="col-4 card" style="width: 20rem;">
+      <img class="card-img-top" src="${product.relatedProducts[i].image}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">${product.relatedProducts[i].name}</h5>
+        <p class="card-text">${product.relatedProducts[i].description}</p>
+        <div class="row d-flex g-2">
+        <a href="#" class="btn btn-warning">${product.relatedProducts[i].price}</a>
+        <a href="#" class="btn btn-light">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-4 card" style="width: 20rem;">
+      <img class="card-img-top" src="${product.relatedProducts[i].image}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">${product.relatedProducts[i].name}</h5>
+        <p class="card-text">${product.relatedProducts[i].description}</p>
+        <div class="row d-flex g-2">
+        <a href="#" class="btn btn-warning">${product.relatedProducts[i].price}</a>
+        <a href="#" class="btn btn-light">Buy Now</a>
+        </div>
+      </div>
+    </div>`;
+    }
+  
+
+
+document.getElementById('productBody').innerHTML = relatePro;
 }
+
+
 function addToLocalStorage(key, arr){
     localStorage.setItem(key,JSON.stringify(arr))
 }
