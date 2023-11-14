@@ -7,7 +7,7 @@
 
 .container{
     margin: auto;
-    max-width: 1280px;
+    max-width: 1200px !important;
 }
 
 @mixin textCustom($fontSize, $fontWeight, $fontColor){
@@ -16,104 +16,146 @@
     color: $fontColor;
 }
 
-header{
-    background: transparent;
-    margin: 0;
+.header_area{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin: 30px 0;
+    header{
+        top: 0;
+        background: transparent;
+        margin: 0;
+    
+        .header_content{
+            position: relative;
+            width: 100%;
+            background: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    .header_content{
-        position: relative;
-        width: 100%;
-        background: #fff;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin: 40px 0;
-
-        .logo{
-            padding: 10px;
-
-            p{
-                margin: 0;
-                font-size: 30px;
-                font-weight: bold;
+            .logo{
+                padding: 10px;
+    
+                p{
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
             }
-        }
-
-        nav{
-            padding: 0;
-            ul{
-                margin: auto;
-                li{
-                    margin: 0 15px;
-                    a{
-                        display: block;
-                        text-decoration: none;
-                        @include textCustom(12px, 600 , #000 );
-                        transition: all 0.5s;
-
-                        span{
-                            padding: 3px;
+    
+            nav{
+                padding: 0;
+                ul{
+                    margin: auto;
+                    li{
+                        margin: 0 15px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            @include textCustom(12px, 600 , #000 );
+                            transition: all 0.5s;
+    
+                            span{
+                                padding: 3px;
+                            }
                         }
-                    }
-
-                    .sub_menu{
-                        position: absolute;
-                        display: none;
-                        padding-top: 26px;
-                        background: #fff;
-                        transition: all 0.5s;
-                        ul{
-                            li{
-                                margin: 0;
-                                transition: all 0.3s;
-                                a{
-                                    display: block;
-                                    text-decoration: none;
-                                    @include textCustom(12px, 600 , #e3a51e );
+    
+                        .sub_menu{
+                            position: absolute;
+                            display: none;
+                            padding-top: 26px;
+                            background: #fff;
+                            transition: all 0.5s;
+                            ul{
+                                li{
+                                    margin: 0;
                                     transition: all 0.3s;
-                                    padding: 0 30px;
-                                    line-height: 45px;
-
-                                    &:hover{
-                                        color: #fff;
+                                    a{
+                                        display: block;
+                                        text-decoration: none;
+                                        @include textCustom(12px, 600 , #e3a51e );
+                                        transition: all 0.3s;
+                                        padding: 0 30px;
+                                        line-height: 45px;
+    
+                                        &:hover{
+                                            color: #fff;
+                                        }
                                     }
-                                }
-
-                                &:hover{
-                                    background: #e3a51e;
+    
+                                    &:hover{
+                                        background: #e3a51e;
+                                    }
                                 }
                             }
                         }
-                    }
-
-                    .active{
-                        color: #e3a51e;
-                    }
-
-                    &:hover{
-                        .sub_menu{
-                            display: block;
-                        }
-
-                        a{
+    
+                        .active{
                             color: #e3a51e;
-                        }   
-                    }
-                } 
-            }
-
-            .col-lg-2{
-                a{
-                    text-decoration: none;
-                    color: #000;
-                    i{
-                        display: inline-block;
-                        font-size: 12px;
-                        padding: 0 5px;
-                        vertical-align: 2px;
-                        transition: all 0.5s;
+                        }
+    
+                        &:hover{
+                            .sub_menu{
+                                display: block;
+                            }
+    
+                            a{
+                                color: #e3a51e;
+                            }   
+                        }
+                    } 
+                }
+    
+                .side{
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                        i{
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 0 5px;
+                            vertical-align: 2px;
+                            transition: all 0.5s;
+                        }
                     }
                 }
             }
         }
+    }
+
+    .search_area{
+        position: fixed;
+        left: 0;
+        width: 100%;
+
+        form{
+            background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+            input{
+                background: transparent;
+                @include textCustom(13px, 500,#fff);
+                border:none;
+                &::-webkit-input-placeholder{
+                    color: #fff;
+                };
+
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .search_btn, .close_btn{
+                i{
+                    font-size: 13px;
+                    color: #fff;
+                }
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+        
     }
 }
 
@@ -129,12 +171,12 @@ footer{
             }
 
             .description{
-                @include textCustom(15px, 500 , #727777 )
+                @include textCustom(13px, 500 , #727777 )
             }
 
             .contact{
                 p{
-                    @include textCustom(15px, 500, #727777);
+                    @include textCustom(13px, 500, #727777);
                     margin-bottom: 10px;
                 }
 
@@ -160,7 +202,7 @@ footer{
 
             .social_list{
                 p{
-                    @include textCustom(15px, 500 , #727777 )
+                    @include textCustom(13px, 500 , #727777 )
                 }
 
                 ul{
@@ -195,6 +237,7 @@ footer{
 }
 
 .feature{
+    margin: 80px 0;
     .owl-carousel{
         .feature_content{
             .title{
@@ -241,6 +284,7 @@ footer{
     
                         .btn_group{
                             margin-top: 20px;
+                            transition: all 0.5s;
                             a{
                                 text-decoration: none;
                                 margin-right: 10px;
@@ -253,12 +297,14 @@ footer{
                                     text-align: center;
                                     line-height: 30px;
                                     border-radius: 50px;
+                                    transition: all 0.5s;
                                 }
                                 span{
                                     display: none;
                                     @include textCustom(13px, 600, #000);
                                     text-transform: uppercase;
                                     margin-left: 10px;
+                                    transition: all 0.5s;
                                 }
     
                                 &:hover{
@@ -279,7 +325,7 @@ footer{
         .owl-nav{
             position: absolute;
             top:20px;
-            width: 450px;
+            width: 420px;
             transform: translate(90%,0);
 
             display: flex;
@@ -291,14 +337,21 @@ footer{
                 }
             }
         }
+
+        @media  screen and (max-width: 950px) {
+            .owl-nav{
+                display: none;
+            }
+        }
     }
     
 }
 
 .deal{
+    margin: 30px 0 80px 0;
     .deal_content{
         h3{
-            @include textCustom(30px,600 ,#000)
+            @include textCustom(36px,600 ,#000)
         }
 
         p{
@@ -366,6 +419,7 @@ footer{
 }
 
 .benefit{
+    padding: 80px 0;
     .benefit_content{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding: 10px;
@@ -410,6 +464,7 @@ footer{
 
 .sponsors{
     .sponsor_content{
+        margin: 80px 0;
         ul{
             margin: 20px 0;
             li{
@@ -523,7 +578,7 @@ footer{
             .right_content{
                 
                 .items{
-                    padding: 0 200px;
+                    padding: 0 150px;
                     img{
                         display: block;
                         width: 100%;
@@ -589,13 +644,14 @@ footer{
 
 .product_category{
     .left{
+        display: block;
         padding: 0;
-        margin: 0 10px;
         .item{
+            margin: 10px;
             padding: 0;
-            margin: 0 15px 15px 0;
             position: relative;
-            overflow: hidden;
+            overflow: unset;
+            outline: none;
             img{
                 height: 100%;
                 vertical-align: middle;
@@ -606,11 +662,13 @@ footer{
 
             .overlay{
                 position: absolute;
+                display: block;
                 background: #000;
                 top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
-                opacity: 0;
+                filter: opacity(0);
                 visibility: hidden;
                 transition: all 0.3s;
                 span{
@@ -628,12 +686,13 @@ footer{
 
             &:hover{
                 .overlay{
-                    opacity: .5;
+                    filter: opacity(.5);
                     visibility: visible;
 
                     span{
+                        height: 100%;
                         top: 45%;
-                        opacity: 2;
+                        filter: opacity(1);
                         visibility: visible;
                     }
                 }
@@ -643,12 +702,103 @@ footer{
 
     .right{
         padding: 0;
-        a{
+        .item{
+            position: relative;
+            margin: 10px;
+            padding: 0;
             img{
-                height: 96%;
-                object-fit: cover;
+                height: 100%;
                 vertical-align: middle;
+                object-fit: cover;
                 border-style: none;
+            }
+
+            .overlay{
+                position: absolute;
+                background: #000;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                span{
+                    display: inline-block;
+                    @include textCustom(15px, 500 ,#fff );
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    text-align: center;
+                    transition: all 0.3s;
+                }
+                
+            }
+
+            &:hover{
+                .overlay{
+                    opacity: .5;
+                    visibility: visible;
+
+                    span{
+                        height: 100%;
+                        top: 45%;
+                        opacity: 2;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    display: block;
+    background: url('./../../image/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    .banner_content{
+        .left{
+            padding: 0;
+            h1{
+                @include textCustom(60px, bold, #000);
+                margin-bottom: 30px;
+                text-transform: capitalize;
+            }
+
+            p{
+                @include textCustom(15px, 500, #727777);
+                margin: 0;
+            }
+
+            .btn_area{
+                margin-top: 30px;
+                button{
+                    
+                    i{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+                        color: #fff;
+                        font-size: 15px;
+                        border-radius: 50px;
+                    }
+                }
+
+                span{
+                    @include textCustom(13px, 600, #000);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .right{
+            img{
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
