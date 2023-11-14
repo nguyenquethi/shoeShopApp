@@ -47,7 +47,7 @@ function getDataUser() {
     .then(function (result) {
       console.log(result.data.content);
       arrUser = result.data;
-      // console.log(arrUser);
+      console.log(arrUser);
       renderDisplay2(result.data.content);
     })
     .catch(function (error) {
@@ -139,4 +139,66 @@ function renderDisplay2(product) {
     </div>`;
 
   document.getElementById('bodyDetail').innerHTML = head + tempMid + tail;
+
+  var relatedPro = `
+  <!-- title  -->
+      <div class="service_title">
+        <h2>RELATED PRODUCTS</h2>
+      </div>
+
+      <!-- content  -->
+      <div class="service_content">
+        <div class="my-carousel">
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+          <!-- item carousel  -->
+          <div class="item_carousel">
+            <div class="carousel_bg">
+              <i class="fa-solid fa-memory"></i>
+              <p>website <br> development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  `
 }
