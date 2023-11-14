@@ -11,7 +11,7 @@
 }
 
 .header_area {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   width: 100%;
   display: block;
@@ -522,7 +522,7 @@ footer .footer_end_content p {
 }
 .hot_deal .hot_deal_content .right .right_content .items a {
   display: block;
-  margin-top: 30px;
+  margin-top: 25px;
   text-decoration: none;
 }
 .hot_deal .hot_deal_content .right .right_content .items a i {
