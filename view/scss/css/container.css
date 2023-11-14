@@ -59,7 +59,7 @@
 .header_area header .header_content nav ul li .sub_menu {
   position: absolute;
   display: none;
-  padding-top: 26px;
+  padding-top: 30px;
   background: #fff;
   transition: all 0.5s;
 }

@@ -39,14 +39,15 @@ function openToast(string) {
 
 var arrUser = [];
 function getDataUser() {
+    let id = ((window.location.href).split('='))[1]
   var promise = axios({
     method: "GET",
-    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=1`,
+    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
     ResponseType: JSON,
   });
   promise
     .then(function (result) {
-      console.log(result.data.content);
+    //   console.log(result.data.content);
       arrUser = result.data;
       console.log(arrUser);
       renderDisplay2(result.data.content);
@@ -185,7 +186,6 @@ function renderDisplay2(product) {
 
 document.getElementById('productBody').innerHTML = relatePro;
 }
-
 
 function addToLocalStorage(key, arr){
     localStorage.setItem(key,JSON.stringify(arr))
