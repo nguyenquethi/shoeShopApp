@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!--JQuerry CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Axios CDN-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!--Owl Carousel CDN-->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+  integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+    <script>
+        $(function(){
+            $('.header').load('../html/components/header.html')
+            $('.banner').load('./components/banner.html')
+            $('.benefit').load('./components/benefit.html')
+            $('.category').load('./components/product_category.html')
+            $('.feature').load('./components/list_feature.html')
+            $('.deal').load('./components/deals.html')
+            $('.footer').load('./components/footer.html')
+            $('.sponsor').load('./components/sponsor.html')
+        })
+    </script>
+
+    <!--Base CSS-->
+    <link rel="stylesheet" href="../scss/css/container.css">
+</head>
+
+<body>
+  <div class="header">
+  </div>
+
+
+
+  <div class="banner">
+  </div>
+
+  <div class="benefit">
+  </div>
+
+  <div class="category">
+  </div>
+
+  <div class="feature">
+  </div>
+
+  <session class="hot_deal">
+    <div class="container-fluid">
+        <div class="hot_deal_content row justify-content-center align-items-center w-100">
+            <div class="left col-lg-6">
+                <div class="left_content text-center">
+                    <h2>exclusive hot deal ends soon!</h2>
+                    <p>Who are extremely love with eco system</p>
+                    <div class="row align-items-center justify-content-between countdown">
+                        <div class="time_element col-lg-3 border-end ">
+                            <h2>12</h2>
+                            <span>Days</span>
+                        </div>
+
+                        <div class="time_element col-lg-3 border-end">
+                            <h2>12</h2>
+                            <span>Hours</span>
+                        </div>
+
+                        <div class="time_element col-lg-3 border-end">
+                            <h2>12</h2>
+                            <span>Mins</span>
+                        </div>
+
+                        <div class="time_element col-lg-3">
+                            <h2>12</h2>
+                            <span>Secs</span>
+                        </div>
+                    </div>
+
+                    <button class="btn">Shop now</button>
+                </div>
+            </div>
+            <div class="right col-lg-6">
+                <div class="right_content text-center">
+                    <div id="owl-demo" class="owl-carousel owl-theme position-relative hot_deal_list">
+                        <!-- <div class="items">
+                            <img src="../image/right_content_img.png" alt="#">
+                            <div class="description">
+                                <div class="price d-flex justify-content-center">
+                                    <div class="discount me-3">550$</div>
+                                    <div class="original">600$</div>
+                                </div>
+                                <h3>adidas new hammer sole for sports person</h3>
+                                <a href="#"><i class="fa fa-shopping-cart"></i><span>add to cart</span></a>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <img src="../image/right_content_img.png" alt="#">
+                            <div class="description">
+                                <div class="price d-flex justify-content-center">
+                                    <div class="discount me-3">550$</div>
+                                    <div class="original">600$</div>
+                                </div>
+                                <h3>adidas new hammer sole for sports person</h3>
+                                <a href="#"><i class="fa fa-shopping-cart"></i><span>add to cart</span></a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </session>
+
+  <div class="sponsor">
+  </div>
+
+  <div class="deal">
+  </div>
+
+  <div class="footer">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <!-- owl Carousel csript -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+$(document).ready(function () {
+  $("#owl-demo").owlCarousel({
+    nav: true, // Show next and prev buttons
+    navText: ["<img src='../image/prev.png'>","<img src='../image/next.png'>"],
+    slideSpeed: 300,
+    paginationSpeed: 400,
+
+    items: 1,
+    itemsDesktop: false,
+    itemsDesktopSmall: false,
+    itemsTablet: false,
+    itemsMobile: false,
+    dots: false,
+    loop: true,
+  });
+});
+</script>
+
+<script src="./../../controller/index.js"></script>
+<script src="../../../controller/components/hotDeal.js"></script>
+</body>
+
+</html>
