@@ -93,10 +93,10 @@
                                 </ul>
                                 <ul class="col-lg-2 d-flex side list-unstyled mx-0">
                                     <li class="nav-item mx-2">
-                                        <a href="#" class="mx-1"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="#url" class="mx-1"><i class="fa fa-shopping-cart"></i></a>
                                     </li>
                                     <li class="nav-item mx-2">
-                                        <a href="#" class="mx-1" id="search"><i class="fa fa-search"></i></a>
+                                        <a href="#url" class="mx-1" id="search"><i class="fa fa-search"></i></a>
                                     </li>
                                     
                                 </ul>
@@ -109,11 +109,14 @@
         <div class="search_area">
             <div class="container">
                 <form id="search_form" action="#" class="d-flex justify-content-between align-items-center px-4">
-                    <input type="text" class="form-control" placeholder="Search products...">
+                    <input type="text" class="form-control search_text" placeholder="Search products...">
                     <button type="submit" class="btn mx-2 search_btn"><i class="fa fa-search"></i></button>
                     <button class="btn mx-2 close_btn"><i class="fa fa-close"></i></button>
                 </form>
-                
+                <div class="search_result p-4 d-block">
+                    
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -130,14 +133,20 @@
   <script>
     $('.search_area').hide()
     $('#search').on("click", function(){
+        document.querySelector('#search_form').reset()
         $('.search_area').slideToggle()
         $('#search_form').focus()
+        $('.search_item').remove()
     })
 
     $('.close_btn').on('click',function(){
         $('.search_area').slideUp(500)
+        
     })
   </script>
+
+    <script src="./../../../controller/index.js"></script>
+    <script src="./../../../controller/components/header.js"></script>
 </body>
 
 </html>

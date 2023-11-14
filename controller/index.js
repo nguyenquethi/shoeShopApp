@@ -224,15 +224,6 @@ async function getFromApi(){
 
 getFromApi()
 
-async function getFromId(id){
-    await axios.get(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`)
-    .then((result) => {
-        
-    }).catch((err) => {
-        console.log(err)
-    });
-}
-
 async function getAllCategoryFromApi(){
     await axios.get('https://shop.cyberlearn.vn/api/Product/getAllCategory')
     .then((result) => {
