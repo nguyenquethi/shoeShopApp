@@ -1,0 +1,43 @@
+.benefit{
+    padding: $p_vertical_8;
+    .benefit_content{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: $p_all_1;
+        ul{
+            margin: $m_0;
+            li{
+                padding: 15px;
+                a{
+                    display: block;
+                    margin: 15px 0;
+                    transition: $transition_5;
+                    i{
+                        color: $color_black_2;
+                        font-size: 25px;
+                        transition: $transition_5;
+                    }
+                }
+
+                &:hover{
+                    a{
+                        i{
+                            color: $color_gray;
+                        }
+                    }
+                }
+
+                .description{
+
+                    h3{
+                        @include textCustom($text_p_2, $f_600, $color_black);
+                        margin: 0;
+                    }
+
+                    span{
+                        @include textCustom($text_email, $f_500, $color_gray)
+                    }
+                }
+            }
+        }
+    }
+}

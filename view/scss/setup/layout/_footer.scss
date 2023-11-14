@@ -1,0 +1,76 @@
+footer{
+    background: $color_black_2;
+    .footer_content{
+        padding: $p_vertical_6;
+
+        .component{
+            h5{
+                @include textCustom($text_h5,$f_600 , $color_white);
+                margin-bottom: 25px;
+            }
+
+            .description{
+                @include textCustom($text_input, $f_500 , $color_gray )
+            }
+
+            .contact{
+                p{
+                    @include textCustom($text_input, $f_500, $color_gray);
+                    margin-bottom: 10px;
+                }
+
+                .email_form{
+                    input{
+                        @include textCustom($text_email, $f_500, $color_gray )
+                    }
+                    button{
+                        background: $color_gray;
+                        margin: $m_0;
+                        border-radius: $m_0;
+
+                        i{
+                            color: $color_white;
+                        }
+                    }
+                }
+            }
+
+            .img_list{
+                padding: $p_0;
+            }
+
+            .social_list{
+                p{
+                    @include textCustom($text_input, $f_500 , $color_gray )
+                }
+
+                ul{
+                    padding: $p_0;
+                    li{
+                        margin-right: 20px;
+                        a{
+                            text-decoration: none;
+                            color: $color_gray_2;
+                            transition: $transition_5;
+                        }
+
+                        &:hover{
+                            a{
+                                color: $color_yellow;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_end_content{
+        padding-bottom: 60px;
+
+        p{
+            @include textCustom($text_email, $f_500, $color_gray )
+        }
+    }
+}

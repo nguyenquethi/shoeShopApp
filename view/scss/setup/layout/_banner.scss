@@ -1,0 +1,50 @@
+.banner{
+    display: block;
+    background: url('./../../image/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    .banner_content{
+        .left{
+            padding: $p_0;
+            h1{
+                @include textCustom($text_h1, $f_bold, $color_black);
+                margin-bottom: 30px;
+                text-transform: capitalize;
+            }
+
+            p{
+                @include textCustom($text_email, $f_500, $color_gray);
+                margin: $m_0;
+            }
+
+            .btn_area{
+                margin-top: 30px;
+                button{
+                    
+                    i{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+                        color: $color-white;
+                        font-size: $text_email;
+                        border-radius: 50px;
+                    }
+                }
+
+                span{
+                    @include textCustom($text_input, $f_600, $color_black);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .right{
+            img{
+                @include imageCustomHeight(block, 100%, cover);
+            }
+        }
+    }
+}

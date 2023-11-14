@@ -1,0 +1,141 @@
+.header_area{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin: $m_vertical_3;
+    header{
+        top: 0;
+        background: transparent;
+        margin: $m_0;
+    
+        .header_content{
+            position: relative;
+            width: 100%;
+            background: $color_white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            .logo{
+                padding: $p_all_1;
+    
+                p{
+                    margin: $m_0;
+                    @include textCustom($text_logo, $f_bold, $color_black)
+                }
+            }
+    
+            nav{
+                padding: $p_0;
+                ul{
+                    margin: auto;
+                    li{
+                        margin: 0 15px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            @include textCustom($text_p, $f_600 , $color_black );
+                            transition: $transition_5;
+    
+                            span{
+                                padding: 3px;
+                            }
+                        }
+    
+                        .sub_menu{
+                            position: absolute;
+                            display: none;
+                            padding-top: 30px;
+                            background: $color_white;
+                            transition: $transition_5;
+                            ul{
+                                li{
+                                    margin: 0;
+                                    transition: $transition_3;
+                                    a{
+                                        display: block;
+                                        text-decoration: none;
+                                        @include textCustom($text_p, $f_600 , $color_yellow );
+                                        transition: $transition_3;
+                                        padding: 0 30px;
+                                        line-height: 45px;
+    
+                                        &:hover{
+                                            color: $color_white;
+                                        }
+                                    }
+    
+                                    &:hover{
+                                        background: $color_yellow;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .active{
+                            color: $color_yellow;
+                        }
+    
+                        &:hover{
+                            .sub_menu{
+                                display: block;
+                            }
+    
+                            a{
+                                color: $color_yellow;
+                            }   
+                        }
+                    } 
+                }
+    
+                .side{
+                    a{
+                        text-decoration: none;
+                        color: $color_black;
+                        i{
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 0 5px;
+                            vertical-align: 2px;
+                            transition: $transition_5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search_area{
+        position: fixed;
+        left: 0;
+        width: 100%;
+
+        form{
+            background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+            input{
+                background: transparent;
+                @include textCustom($text_input, $f_500,#fff);
+                border:none;
+                &::-webkit-input-placeholder{
+                    color: #fff;
+                };
+
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .search_btn, .close_btn{
+                i{
+                    font-size: $text_input;
+                    color: $color_white;
+                }
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,68 @@
+.deal{
+    margin: 30px 0 80px 0;
+    .deal_content{
+        h3{
+            @include textCustom($text_h3_2,$f_600 ,$color_black)
+        }
+
+        p{
+            @include textCustom($text_email, $f_500,$color_gray )
+        }
+
+        .deals_list{
+            margin: $m_vertical_5;
+            .items_content{
+                .item{
+                    margin-bottom: 30px;
+                    img{
+                        @include imageCustomWidth(block, 70px )
+                    }
+                    .description{
+                        margin: 10px 15px;
+                        a{
+                            text-decoration: none;
+                            transition: $transition_5;
+                            margin-bottom: 10px;
+                            span{
+                                @include textCustom($text_email, $f_500, $color_black);
+                                text-transform: uppercase;
+                                transition: $transition_5;
+                            }
+                        }
+
+                        .price{
+                            width: 60%;
+                            .discount{
+                                @include textCustom($text_p_2, $f_500, $color_black)
+                            }
+                            .original{
+                                @include textCustom($text_p_2, $f_500, $color_gray);
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        .description{
+                            a{
+                                span{
+                                    color: $color_yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .black_friday_content{
+                width: 250px;
+
+                a{
+                    img{
+                        @include imageCustomWidth(block, 100% )
+                    }
+                }
+            }
+        }
+    }
+}

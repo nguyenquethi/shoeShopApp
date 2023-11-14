@@ -1,5 +1,5 @@
-document.querySelector(".search_btn").addEventListener('click', function(){
-    let keyword = document.querySelector('.search_text').value
+document.querySelector(".search_text").addEventListener('change', function(event){
+    let keyword = event.target.value
     let productArray = getFromLocalStorage('productArr')
 
     let content =''
@@ -11,9 +11,13 @@ document.querySelector(".search_btn").addEventListener('click', function(){
         }
     }
     arr.forEach((item) =>{
-        content += `<div class="d-flex w-25 search_item bg-white">
-        <img class="img-fluid w-50" src="${item.image}" alt="#">
-        <span>${item.name}</span>
+        content += `<div class="d-flex w-50 search_item bg-white">
+        <a href="../html/components/detail.html" onclick = "location.href = this.href + '?id=' + ${item.id};return false;">
+            <img class="img-fluid w-50" src="${item.image}" alt="#">
+        </a>
+        <a href="../html/components/detail.html" onclick = "location.href = this.href + '?id=' + ${item.id};return false;" style = "text-decoration:none; display:block;">
+            <span>${item.name}</span>
+        </a>
     </div>`
 
     document.querySelector('.search_result').innerHTML = content

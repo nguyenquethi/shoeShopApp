@@ -1,0 +1,29 @@
+.sponsors{
+    .sponsor_content{
+        margin: $m_vertical_8;
+        ul{
+            margin: $m_vertical_2;
+            li{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: $transition_5;
+                    img{
+                        @include imageCustomWidth(block, 120px );
+                        filter: opacity(0.5);
+                        transition: $transition_5;
+                    }
+                }
+
+                &:hover{
+                    a{
+                        img{
+                            filter: opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

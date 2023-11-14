@@ -1,0 +1,109 @@
+.feature{
+    margin: $m_vertical_8;
+    .owl-carousel{
+        .feature_content{
+            .title{
+                h3{
+                    @include textCustom($text_h3, $f_bold,$color_black );
+                    margin: $m_vertical_1;
+                }
+    
+                p{
+                    @include textCustom($text_p_2, $f_500, $color_gray);
+                }
+            }
+    
+            .feature_items{
+                margin: $m_vertical_1;
+    
+                .item{
+                    margin: $m_vertical_2;
+    
+                    img{
+                        @include imageCustomWidth(block, 100% );
+                        margin-bottom: 20px;
+                    }
+    
+                    .product_description{
+                        h3{
+                            @include textCustom($text_p_2, $f_600, $color_black);
+                            text-transform: uppercase;
+                        }
+    
+                        .price{
+                            .discount_price{
+                                margin: $m_0;
+                                @include textCustom($text_p_2, $f_500, $color_black )
+                            }
+    
+                            .original_price{
+                                margin: $m_0;
+                                @include textCustom($text_p_2, $f_500, $color_gray);
+                                text-decoration:line-through
+                            }
+                        }
+    
+                        .btn_group{
+                            margin-top: 20px;
+                            transition: $transition_5;
+                            a{
+                                text-decoration: none;
+                                margin-right: 10px;
+                                transition: $transition_5;
+                                i{
+                                    width: 30px;
+                                    height: 30px;
+                                    background: $color_blue;
+                                    color: $color_white;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    border-radius: 50px;
+                                    transition: $transition_5;
+                                }
+                                span{
+                                    display: none;
+                                    @include textCustom($text_email, $f_600, $color_black);
+                                    text-transform: uppercase;
+                                    margin-left: 10px;
+                                    transition: $transition_5;
+                                }
+    
+                                &:hover{
+                                    i{
+                                        background: linear-gradient(to-right,#ffc107 50%, #fd7e14 50%);
+                                    }
+                                    span{
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-nav{
+            position: absolute;
+            top:20px;
+            width: 420px;
+            transform: translate(90%,0);
+
+            display: flex;
+            justify-content: space-between;
+
+            &:hover{
+                button{
+                    background: transparent;
+                }
+            }
+        }
+
+        @media  screen and (max-width: 950px) {
+            .owl-nav{
+                display: none;
+            }
+        }
+    }
+    
+}

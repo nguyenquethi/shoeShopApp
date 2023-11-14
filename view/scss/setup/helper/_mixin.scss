@@ -1,0 +1,16 @@
+@mixin textCustom($fontSize, $fontWeight, $fontColor){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $fontColor;
+}
+
+@mixin imageCustomWidth($display,$width){
+    display: $display;
+    width: $width;
+}
+
+@mixin imageCustomHeight($display,$width,$objectFit){
+    display: $display;
+    height: $width;
+    object-fit: $objectFit;
+}
