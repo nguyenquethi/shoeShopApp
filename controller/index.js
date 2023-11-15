@@ -42,7 +42,7 @@ function getDataUser() {
     let id = ((window.location.href).split('='))[1]
   var promise = axios({
     method: "GET",
-    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=1`,
     ResponseType: JSON,
   });
   promise
