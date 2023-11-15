@@ -19,7 +19,7 @@ function getListFeature(){
             <a type="button" href="#url" id="shoppingCart" onclick="addToCart(${item.id})"><i class="fa fa-shopping-cart"></i><span>add to bag</span></a>
             <a type="button" href="#url" onclick="addToWishList(${item.id})" ><i class="fa fa-heart"></i><span>wishlist</span></a>
             <a href="#url"><i class="fa fa-rotate"></i><span>compare</span></a>
-            <a href="../html/components/detail.html" onclick = "location.href = this.href + '?id=' + ${item.id};return false;"><i class="fa fa-up-down-left-right"></i><span>view more</span></a>
+            <a href="./view/html/components/detail.html" onclick = "location.href = this.href + '?id=' + ${item.id};return false;"><i class="fa fa-up-down-left-right"></i><span>view more</span></a>
           </div>
         </div>
       </div>`
